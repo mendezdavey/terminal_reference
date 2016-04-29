@@ -1,0 +1,6 @@
+Terminal Hacks 4-21-2016
+How to view hidden files.
+ls -a 
+How to copy the contens of a directory to another directory.
+cp -a /source/. /dest/
+

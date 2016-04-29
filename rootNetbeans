@@ -1,0 +1,4 @@
+Saturday April 9, 2016
+How to launch Netbeans with root privileges.
+1) Make sure you have root privileges.
+/bin/sh /usr/local/netbeans-8.1/bin/netbeans

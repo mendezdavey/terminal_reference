@@ -1,0 +1,7 @@
+How to fix boot problems with repair cd.
+Use the repair cd to repeair grub
+
+How to add missing operating system using grub.
+grub2-mkconfig /boot/grub2/grub.cfg
+grub2-mkconfig -o /boot/grub2/grub.cfg
+

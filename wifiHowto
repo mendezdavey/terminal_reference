@@ -1,0 +1,13 @@
+How to Enable wifi on Dell Latitude e5540 Centos7
+
+ip link show wlp2s0 
+ip link set wlp2s0 up
+wpa_supplicant -B -D wext -i wlp2s0 -c /etc/wpa_supplicant.conf
+Successfully initialized wpa_supplicant
+dhclient wlp2s0
+ping 8.8.8.8
+
+Other Useful WiFi Commands
+iw wlp2s0 link # To see if we are connected
+command kill -9 4278 To kill processes 
+iw wlp2s0 scan | more to search WiFi Networks
