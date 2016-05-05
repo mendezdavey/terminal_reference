@@ -1,0 +1,92 @@
+Tlp commands for saving power 5-5-2016
+Hint: all commands described in this section that are shown with sudo, may be executed without sudo in a root shell.
+wifi, bluetooth, wwan
+
+Enable, disable or check the state of builtin wifi, bluetooth and wwan (3G or UMTS) radios:
+wifi [ on | off | toggle ]
+
+Hint: for Intel 2200bg and 2915abg cards call the command with sudo or in a root shell.
+bluetooth [ on | off | toggle ]
+wwan [ on | off | toggle ]
+
+Prerequisite: the radio device must be supported by the kernel's rfkill framework (except Intel 2100/2200/2915). This may be checked with
+rfkill list
+tlp-stat
+
+Status report with configuration and all active settings:
+sudo tlp-stat
+
+Show battery information:
+sudo tlp-stat -b
+sudo tlp-stat --battery
+
+Show configuration:
+tlp-stat -c
+tlp-stat --config
+
+Show disk data:
+tlp-stat -d
+tlp-stat --disk
+
+Show PCI(e) device data:
+tlp-stat -e
+tlp-stat --pcie
+
+Show processor data:
+tlp-stat -p
+tlp-stat --processor
+
+Show radio device state:
+tlp-stat -r
+tlp-stat --rfkill
+
+Show system data:
+tlp-stat -s
+tlp-stat --system
+
+Show temperatures and fan speed:
+tlp-stat -t
+tlp-stat --temp
+
+Show USB device data:
+tlp-stat -u
+tlp-stat --usb
+
+Show more data:
+tlp-stat -v
+tlp-stat --verbose
+
+Show warnings:
+tlp-stat -w
+tlp-stat --warn
+
+Please refer to the TLP FAQ, Warnings section, for details.
+
+Show trace output:
+tlp-stat -T
+tlp-stat --trace
+tlp
+Apply Settings
+
+(according to the actual power source)
+sudo tlp start
+Apply Battery Settings
+
+(ignoring the actual power source)
+sudo tlp bat
+Apply AC Settings
+
+(ignoring the actual power source)
+sudo tlp ac
+Apply Auto Suspend for all attached USB Devices
+
+(except input and blacklisted devices)
+sudo tlp usb
+Power off Optical Drive in Drive Slot or Ultrabay
+sudo tlp bayoff
+
+Hints:
+
+    Re-power the drive by releasing and reinserting the drive slot/Ultrabay eject lever; on newer models push the media eject button
+    Devices other than optical drives – in particular hard disk drives – are not affected by this command
+
