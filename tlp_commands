@@ -1,4 +1,5 @@
 Tlp commands for saving power 5-5-2016
+/etc/default/tlp
 Hint: all commands described in this section that are shown with sudo, may be executed without sudo in a root shell.
 wifi, bluetooth, wwan
 
