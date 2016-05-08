@@ -1,0 +1,29 @@
+How to save battery life in linux May 5, 2016
+
+Install powertop: a power management tool from Intel.
+sudo apt-get install powertop
+
+Set all settings for maximum power savings.
+sudo powertop --auto-tune
+
+Disable intel turbo boost
+sudo -i echo 1 > /sys/devices/system/cpu/intel_pstate/no_turbo
+
+Set maximum power to 75%
+echo 75 > /sys/devices/cpu/intel_pstate/max_perf_pct
+
+Configure swap to be used only when ram runs out of space.
+sudo -i echo 0 > /proc/sys/vm/swappiness
+
+Create a ram disk to write all of your log files too. 
+This saves energy by not having to write to your hardrive.
+add the following commands to the end of the file.
+sudo vim /etc/fstap
+tmpfs	/tmp	   tmpfs	defaults,noatime,size=512M,mode=1777	0  0
+tmpfs	/var/spool tmpfs	defaults,noatime,size=512M,mode=1777	0  0
+tmpfs	/var/tmp   tmpfs	defaults,noatime,size=512M,mode=1777	0  0
+# I don't care about log files after reboots
+tmpfs	/var/log   tmpfs	defaults,noatime,size=512M,mode=0755	0  0
+
+
+

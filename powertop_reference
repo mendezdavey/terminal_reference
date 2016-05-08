@@ -1,0 +1,3 @@
+The intel_pstate controls can be found at:
+cd /sys/devices/system/cpu/intel_pstate/
+
