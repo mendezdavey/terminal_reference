@@ -1,4 +1,4 @@
-How to save battery life in linux May 5, 2016
+How to save battery life in linux May 10, 2016
 
 Install powertop: a power management tool from Intel.
 sudo apt-get install powertop
@@ -24,6 +24,15 @@ tmpfs	/var/spool tmpfs	defaults,noatime,size=512M,mode=1777	0  0
 tmpfs	/var/tmp   tmpfs	defaults,noatime,size=512M,mode=1777	0  0
 # I don't care about log files after reboots
 tmpfs	/var/log   tmpfs	defaults,noatime,size=512M,mode=0755	0  0
+
+How to see loaded modules.
+sudo lsmod
+
+How to turn off (b43) wifi module when not in use.
+sudo modprobe -r b43
+
+How to load the module when needed.
+sudo modprobe b43
 
 
 
