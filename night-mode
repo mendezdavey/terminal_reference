@@ -1,0 +1,8 @@
+#!/bin/bash
+# night-mode a script to set my computer ready for nightime work
+echo "running xflux"
+xflux -z 78753
+echo "running brightness to 50"
+sudo -i
+echo 50 > /sys/class/backlight/intel_backlight/brightness
+
