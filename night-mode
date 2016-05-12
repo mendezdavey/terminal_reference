@@ -5,4 +5,5 @@ xflux -z 78753
 echo "running brightness to 50"
 sudo -i
 echo 50 > /sys/class/backlight/intel_backlight/brightness
+echo 2 > /sys/class/leds/smc::kbd_backlight/brightness
 

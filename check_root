@@ -1,0 +1,33 @@
+#!/bin/bash -x
+# Check if root
+echo $whoami
+
+if (( "$(whoami)" == "root"));
+then 
+	echo "We are root"
+else
+	echo "We are not root"
+fi
+echo "example 2"
+if [ $(id -u) != "0" ]; then
+    echo "You must be the superuser to run this script" >&2
+    
+fi
+echo "example3"
+string="root"
+if [ $string = "root" ];then
+	echo "$string = root"
+        echo "it works!"
+fi       
+echo "example4"
+if [ $(whoami) = "root" ];then
+	echo "we are root!"
+else
+	echo "Sorry no root!"
+fi
+echo "check connection example 5"
+if [ "$(iw wlan0 link)" = "Not connected." ];then
+	echo "Try to connect to the internet please!"
+else
+	echo "We has interwebs!"
+fi
