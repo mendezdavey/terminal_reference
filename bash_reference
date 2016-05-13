@@ -1,0 +1,13 @@
+How to setup up your path to run your bash scripts May 13, 2016
+
+Setup your bin directory should be a subdirectory of you home folder.
+/home/you/bin
+
+Export your path to allow you to run your programs from anywhere in the terminalexport PATH=$PATH:/home/you/bin
+
+View all your paths
+echo PATH$
+
+I am setting up a git directory named 'bin' to save all of my bash scripts.
+
+
