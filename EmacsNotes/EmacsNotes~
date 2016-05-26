@@ -1,0 +1,24 @@
+How to use Emacs24 May 25, 2016
+
+
+Saving in Emacs
+C-c, C-s
+
+Quit Emacs
+C-x, C-c
+
+
+*Emacs Buffers*
+
+Buffers Kill
+C-x, k
+
+Buffers List
+C-x, C-b
+
+Buffers go back
+C-x, b
+
+
+
+
