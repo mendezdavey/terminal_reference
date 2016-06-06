@@ -1,11 +1,36 @@
-How to use Emacs24 May 25, 2016
+Learning Emacs by David Mendez
+June 7, 2016
+Emacs is an old text editor and has not changed in over 20 years.
+This text editor is tried and true and is compatible with all computer
+languages to date.
+
+Emacs keys to learn.
+      C = Ctrl key
+      RET = Return key
+      ex. C-x C-c (Ctrl - x) + (Ctrl - c) Exits emacs
+
+Open a new file in current directory.
+     C-x C-f <filename> RET
+
+Save in emacs.
+     C-x C-s
+    
+View the current directory.
+     C-x C-f RET
+
+Kill current buffer.
+     C-x k
+
+Switch to last previous buffer.
+       C-x b 
 
 
-Saving in Emacs
-C-c, C-s
 
-Quit Emacs
-C-x, C-c
+
+
+
+
+
 
 
 *Emacs Buffers*
